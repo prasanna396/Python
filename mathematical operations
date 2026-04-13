@@ -1,0 +1,35 @@
+import math
+
+x=47
+print(f"Square root of {x} is {math.sqrt(x)}")
+
+x,y=4,2
+print(f"{x} to the Power {y} is {math.pow(x,y)}")
+
+x=45
+print(f"Radian of {x} is {math.radians(x)}")
+print(f"Sine of {x} is {math.sin(x)}")
+print(f"Cosine of {x} is {math.cos(x)}")
+print(f"Tangent of {x} is {math.tan(x)}")
+
+x=1000
+print(f"Logarithmic of {x} is {math.log(x)}")
+print(f"Natural Logarithmic of {x} is {math.log10(x)}")
+
+x=17.78
+print(f"{x} After rounding off {round(x)}")
+print(f"Floor of {x} is {math.floor(x)}")
+print(f"Ceil of {x} is {math.ceil(x)}")
+
+print("\n Advanced math concepts \n")
+n,r=6,2
+a=math.factorial(n)/math.factorial(n-r)
+print(f"The permutation ,6P2 is {a}")
+
+p=1000
+r=0.05
+t=5
+A=p*math.pow((1+r),t)
+print(f"Principal amount : {p} \nRate of interest :{r} \nTime :{t} ")
+print(f"Compound interest is {A}")
+
