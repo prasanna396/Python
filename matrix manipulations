@@ -1,0 +1,24 @@
+import numpy as n
+print("Basic numpy operations")
+arr=n.array([1,2,3,4])
+print("Array \n")
+print(arr)
+
+print("Element wise addition")
+print("A+5:",arr+5)
+print("square of array :",arr**2)
+
+print("Mean :",n.mean(arr))
+print("Standard Deviation:",n.std(arr))
+
+print("Matrix")
+A=n.array([[1,2],[3,4]])
+B=n.array([[5,6],[7,8]])
+print("Mat A:",A,"Mat B:",B)
+
+print("Matrix addition :",A+B)
+print("Matrix subraction :",A-B)
+print("Element wise multiplication with 5:",A*5)
+print("Multiplications of matrix :",n.dot(A,B))
+print("Transpose of matrix A:",A.T)
+
