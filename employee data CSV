@@ -1,0 +1,42 @@
+import csv
+
+# ----------- Part 1: Writing to CSV -----------
+with open("emp.csv", "w", newline='') as f:
+    w = csv.writer(f)
+    w.writerow(["Eno", "Ename", "Esal", "Eadd"])  # Header
+
+    n = int(input("Enter the number of employees: "))
+    for i in range(n):
+        eno = int(input("Enter employee number: "))
+        ename = input("Enter employee name: ")
+        esal = float(input("Enter employee salary: "))
+        eadd = input("Enter address: ")
+        w.writerow([eno, ename, esal, eadd])
+
+print("Employee data written successfully!")
+
+
+with open("emp.csv", "r", newline='') as f:
+    reader = csv.reader(f)
+    header = next(reader)  # Skip header
+
+    max_salary = 0.0
+    top_emp = None
+
+    for row in reader:
+        try:
+            salary = float(row[2])
+            if salary > max_salary:
+                max_salary = salary
+                top_emp = row
+        except (IndexError, ValueError):
+            continue  
+
+    if top_emp:
+        print("\nTop Employee Details:")
+        print("Employee Number  :", top_emp[0])
+        print("Employee Name    :", top_emp[1])
+        print("Employee Salary  :", top_emp[2])
+        print("Employee Address :", top_emp[3])
+    else:
+        print("No valid employee data found.")
