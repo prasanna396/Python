@@ -1,0 +1,34 @@
+f=open("virat.txt","a+")
+while True:
+   print("""------menu-------
+         1.to read
+         2.to add or write content
+         3.to tell current position of file pointer
+         4.to move file pointer to given position
+         5.exit
+        """)
+   n=int(input("enter your choice:"))
+
+   if n==1:
+      f.seek(0)
+      a=f.read()
+      print(a)
+      pass
+   elif n==2:
+      p=input("enter any content:")
+      f.write(p)
+      print("content added successfullly")
+   elif n==3:
+      print("the current position of the file pointer is:",f.tell())
+   elif n==4:
+      g=int(input("enter number to move file pointer :"))
+      f.seek(g)
+      print("the file pointer is in :",f.tell())
+   else:
+      print("exiting.....")
+      break
+      
+#f=open("virat.txt","r")
+#a=f.read()
+#print(a)
+
