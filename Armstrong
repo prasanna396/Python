@@ -1,0 +1,12 @@
+num=int(input("enter a no:"))
+order=len(str(num))
+s=0
+temp=num
+while temp>0:
+   digit=temp%10
+   s=s+(digit**order)
+   temp=temp//10
+if num==s:
+   print("Armstrong")
+else:
+   print("Not Armstrong")
